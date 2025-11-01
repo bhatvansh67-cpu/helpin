@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Helpin - About Us</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="logo"><b>Help</b><span class="logo-accent">in</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lending.html">Lending</a></li>
+        <li><a href="renting.html">Renting</a></li>
+        <li><a href="helping.html">Helping</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+      </ul>
+      <!-- Auth links will be populated by JS -->
+      <div class="nav-links" id="auth-links">
+        <a href="login.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- User Info Bar (hidden by default) -->
+  <div class="user-info-bar" id="user-info" style="display: none;">
+    Logged in as: <span id="user-id-display" class="font-bold"></span>
+  </div>
+
+  <main class="main-content">
+    <h1>About Helpin</h1>
+    <p>
+      Welcome to Helpin, the heart of community-driven exchange. We believe that everyone has something to offer and everyone has a need to be met. Our platform was born from a simple idea: what if we could make it easy for neighbors to help each other?
+    </p>
+    <p>
+      In a world that's more connected digitally but often disconnected locally, Helpin bridges the gap. We're not just a marketplace; we're a community hub. We empower you to lend that power drill you use twice a year, rent out your spare room for a weekend, or offer your skills as a tutor to a local student.
+    </p>
+
+    <!-- Use a container for the mission/team sections -->
+    <section class="listing-form-container" style="margin-top: 40px;">
+        <h2>Our Mission</h2>
+        <p style="font-size: 1rem; margin-bottom: 0;">Our mission is to build stronger, more resilient communities by fostering a culture of sharing and mutual aid. We aim to provide a safe, reliable, and user-friendly platform that connects people and resources, reducing waste and building local connections.</p>
+    </section>
+
+    <section class="listing-form-container" style="margin-top: 30px;">
+        <h2>Meet the (Mock) Team</h2>
+        <p style="font-size: 1rem; margin-bottom: 0;">We're a passionate group of developers, designers, and community builders dedicated to making Helpin a reality. (This is placeholder text, but you get the idea!)</p>
+    </section>
+
+  </main>
+
+  <footer id="contact" class="footer">
+    <p>Contact us: support@helpin.com</p>
+    <p>&copy; 2025 Helpin. All rights reserved.</p>
+  </footer>
+
+  <!-- Main App Script -->
+  <script type="module" src="app.js?v=4"></script>
+</body>
+</html>
+

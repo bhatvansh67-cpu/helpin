@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Helpin - Helping</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="logo"><b>Help</b><span class="logo-accent">in</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lending.html">Lending</a></li>
+        <li><a href="renting.html">Renting</a></li>
+        <li><a href="helping.html" class="active">Helping</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li><a href="messages.html">Messages</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+      <!-- Auth links will be populated by JS -->
+      <div class="nav-links" id="auth-links">
+        <a href="login.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- User Info Bar (hidden by default) -->
+  <div class="user-info-bar" id="user-info" style="display: none;">
+    Logged in as: <span id="user-id-display" class="font-bold"></span>
+  </div>
+
+  <main class="main-content">
+    <h1>Helping Service</h1>
+    <p>
+      Offer your skills and services to your community. This page is private and
+      only you can see your service offers here.
+    </p>
+
+    <!-- Add Service Form -->
+    <section class="listing-form-container" id="add-helping-form-container" style="display: none;">
+      <h2>Offer a Service</h2>
+      <form id="add-helping-form" class="listing-form">
+        <div id="form-helping-error-message" class="error-message" style="display: none;"></div>
+        <div class="form-group">
+          <label for="helping-title">Service Title</label>
+          <input type="text" id="helping-title" name="title" required />
+        </div>
+        <div class="form-group">
+          <label for="helping-description">Service Description</label>
+          <textarea id="helping-description" name="description" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="helping-images">Images (up to 5, optional)</label>
+          <input type="file" id="helping-images" accept="image/*" multiple />
+        </div>
+        <div class="form-group">
+          <label for="helping-type">Type</label>
+          <select id="helping-type" name="type" required>
+            <option value="">--Select a type--</option>
+            <option value="Tutoring">Tutoring</option>
+            <option value="Manual-Labor">Manual Labor</option>
+            <option value="Tech-Support">Tech Support</option>
+            <option value="Errands">Errands</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="helping-public" checked>
+            Make public (visible to others)
+          </label>
+        </div>
+        <button type="submit" class="btn-submit">Offer Service</button>
+      </form>
+    </section>
+
+    <!-- Listings Display -->
+    <section class="listings-container" id="helping-listings-container" style="display: none;">
+      <h2>Your Service Offers</h2>
+      <div id="helping-listings-list">
+        <p class="text-gray-500">Loading services...</p>
+        <!-- Listings will be populated by app.js -->
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <p>Contact us: support@helpin.com</p>
+    <p>&copy; 2025 Helpin. All rights reserved.</p>
+  </footer>
+
+  <!-- Main App Script -->
+  <script type="module" src="app.js?v=5"></script>
+</body>
+</html>
+

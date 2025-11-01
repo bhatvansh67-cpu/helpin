@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login - MyApp</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">MyApp</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lending.html">Lending</a></li>
+        <li><a href="renting.html">Renting</a></li>
+        <li><a href="helping.html">Helping</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li><a href="messages.html">Messages</a></li>
+        <!-- Auth links will be managed by JS -->
+        <li id="auth-links">
+          <a href="login.html" class="active">Login</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- This div will show the current user's ID -->
+  <div id="user-info" class="user-info-bar" style="display: none;">
+    Logged in as: <span id="user-id-display" class="font-bold"></span>
+  </div>
+
+  <div class="auth-container" id="auth-container">
+    <!-- Login Form -->
+    <div id="login-container">
+      <h1>Login</h1>
+      <div id="login-error" class="error-message" style="display: none;"></div>
+      <form id="login-form" class="auth-form">
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <div class="auth-toggle">
+        Don't have an account? <a id="show-signup">Sign Up</a>
+      </div>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signup-container" style="display: none;">
+      <h1>Sign Up</h1>
+      <div id="signup-error" class="error-message" style="display: none;"></div>
+      <div id="signup-success" class="success-message" style="display: none;"></div>
+      <form id="signup-form" class="auth-form">
+        <input type="email" id="signup-email" placeholder="Email" required>
+        <input type="password" id="signup-password" placeholder="Password (min. 6 characters)" required>
+        <button type="submit">Create Account</button>
+      </form>
+      <div class="auth-toggle">
+        Already have an account? <a id="show-login">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <footer id="contact" class="footer">
+    <p>Contact us: support@myapp.com</p>
+    <p>&copy; 2025 MyApp. All rights reserved.</p>
+  </footer>
+
+  <!-- Main App Script -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>

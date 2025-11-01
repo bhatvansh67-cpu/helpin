@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Helpin - Messages</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="logo"><b>Help</b><span class="logo-accent">in</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lending.html">Lending</a></li>
+        <li><a href="renting.html">Renting</a></li>
+        <li><a href="helping.html">Helping</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li><a href="messages.html" class="active">Messages</a></li>
+      </ul>
+      <div class="nav-links" id="auth-links">
+        <a href="login.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="user-info-bar" id="user-info" style="display: none;">
+    Logged in as: <span id="user-id-display" class="font-bold"></span>
+  </div>
+
+  <main class="main-content">
+    <h1>Messages</h1>
+    <section class="listing-form-container">
+      <div id="conversations-list">
+        <p class="text-gray-500">Loading conversations...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <p>Contact us: support@helpin.com</p>
+    <p>&copy; 2025 Helpin. All rights reserved. <a href="#" style="color:#9ca3af;">Terms</a> • <a href="#" style="color:#9ca3af;">Privacy</a></p>
+  </footer>
+
+  <script type="module" src="app.js?v=8"></script>
+</body>
+</html>
+
+

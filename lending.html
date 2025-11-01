@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Helpin - Lending</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="logo"><b>Help</b><span class="logo-accent">in</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lending.html" class="active">Lending</a></li>
+        <li><a href="renting.html">Renting</a></li>
+        <li><a href="helping.html">Helping</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li><a href="messages.html">Messages</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+      <!-- Auth links will be populated by JS -->
+      <div class="nav-links" id="auth-links">
+        <a href="login.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- User Info Bar (hidden by default) -->
+  <div class="user-info-bar" id="user-info" style="display: none;">
+    Logged in as: <span id="user-id-display" class="font-bold"></span>
+  </div>
+
+  <main class="main-content">
+    <h1>Lending Service</h1>
+    <p>
+      Add items you'd like to lend to your community. This page is private and
+      only you can see your listings here.
+    </p>
+
+    <!-- Add Listing Form -->
+    <section class="listing-form-container" id="add-listing-form-container" style="display: none;">
+      <h2>Add a New Listing</h2>
+      <form id="add-listing-form" class="listing-form">
+        <div id="form-error-message" class="error-message" style="display: none;"></div>
+        <div class="form-group">
+          <label for="listing-title">Title</label>
+          <input type="text" id="listing-title" name="title" required />
+        </div>
+        <div class="form-group">
+          <label for="listing-description">Description</label>
+          <textarea id="listing-description" name="description" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="listing-images">Images (up to 5, optional)</label>
+          <input type="file" id="listing-images" accept="image/*" multiple />
+        </div>
+        <div class="form-group">
+          <label for="listing-type">Type</label>
+          <select id="listing-type" name="type" required>
+            <option value="">--Select a type--</option>
+            <option value="Tool">Tool</option>
+            <option value="Book">Book</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="listing-public" checked>
+            Make public (visible to others)
+          </label>
+        </div>
+        <button type="submit" class="btn-submit">Add Listing</button>
+      </form>
+    </section>
+
+    <!-- Listings Display -->
+    <section class="listings-container" id="listings-container" style="display: none;">
+      <h2>Your Listings</h2>
+      <div id="listings-list">
+        <p class="text-gray-500">Loading listings...</p>
+        <!-- Listings will be populated by app.js -->
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <p>Contact us: support@helpin.com</p>
+    <p>&copy; 2025 Helpin. All rights reserved.</p>
+  </footer>
+
+  <!-- Main App Script -->
+  <script type="module" src="app.js?v=5"></script>
+</body>
+</html>
+

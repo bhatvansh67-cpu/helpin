@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Helpin - Renting</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="logo"><b>Help</b><span class="logo-accent">in</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lending.html">Lending</a></li>
+        <li><a href="renting.html" class="active">Renting</a></li>
+        <li><a href="helping.html">Helping</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li><a href="messages.html">Messages</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+      <!-- Auth links will be populated by JS -->
+      <div class="nav-links" id="auth-links">
+        <a href="login.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- User Info Bar (hidden by default) -->
+  <div class="user-info-bar" id="user-info" style="display: none;">
+    Logged in as: <span id="user-id-display" class="font-bold"></span>
+  </div>
+
+  <main class="main-content">
+    <h1>Renting Service</h1>
+    <p>
+      Add items you'd like to rent out to your community. This page is private and
+      only you can see your listings here.
+    </p>
+
+    <!-- Add Rental Form -->
+    <section class="listing-form-container" id="add-renting-form-container" style="display: none;">
+      <h2>Add a New Rental</h2>
+      <form id="add-renting-form" class="listing-form">
+        <div id="form-renting-error-message" class="error-message" style="display: none;"></div>
+        <div class="form-group">
+          <label for="renting-title">Title</label>
+          <input type="text" id="renting-title" name="title" required />
+        </div>
+        <div class="form-group">
+          <label for="renting-description">Description</label>
+          <textarea id="renting-description" name="description" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="renting-images">Images (up to 5, optional)</label>
+          <input type="file" id="renting-images" accept="image/*" multiple />
+        </div>
+        <div class="form-group">
+          <label for="renting-type">Type</label>
+          <select id="renting-type" name="type" required>
+            <option value="">--Select a type--</option>
+            <option value="Vehicle">Vehicle</option>
+            <option value="Property">Property</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Event-Supplies">Event Supplies</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="renting-public" checked>
+            Make public (visible to others)
+          </label>
+        </div>
+        <button type="submit" class="btn-submit">Add Rental</button>
+      </form>
+    </section>
+
+    <!-- Listings Display -->
+    <section class="listings-container" id="renting-listings-container" style="display: none;">
+      <h2>Your Rentals</h2>
+      <div id="renting-listings-list">
+        <p class="text-gray-500">Loading rentals...</p>
+        <!-- Listings will be populated by app.js -->
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <p>Contact us: support@helpin.com</p>
+    <p>&copy; 2025 Helpin. All rights reserved.</p>
+  </footer>
+
+  <!-- Main App Script -->
+  <script type="module" src="app.js?v=5"></script>
+</body>
+</html>
+

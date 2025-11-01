@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Helpin - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="logo"><b>Help</b><span class="logo-accent">in</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="lending.html">Lending</a></li>
+        <li><a href="renting.html">Renting</a></li>
+        <li><a href="helping.html">Helping</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li><a href="messages.html">Messages</a></li>
+      </ul>
+      <!-- Auth links will be populated by JS -->
+      <div class="nav-links" id="auth-links">
+        <a href="login.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- User Info Bar (hidden by default) -->
+  <div class="user-info-bar" id="user-info" style="display: none;">
+    Logged in as: <span id="user-id-display" class="font-bold"></span>
+  </div>
+
+  <section class="hero">
+    <h1>Welcome to Helpin</h1>
+    <p>Your go-to app for lending, renting, and helping your community.</p>
+    <a href="#services" class="btn">Explore Services</a>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <!-- Lending Card -->
+      <a href="lending.html" class="card card-link">
+        <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 11.21 12.77 10.5 12 10.5s-1.536.71-2.121 1.256c-1.172.879-1.172 2.303 0 3.182Z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4.5a2.25 2.25 0 0 1 2.25-2.25h1.5A2.25 2.25 0 0 1 18 4.5V6m-6 0v1.5a2.25 2.25 0 0 0 2.25 2.25h1.5a2.25 2.25 0 0 0 2.25-2.25V6m-6 0h.008v.008H12V6Z" />
+        </svg>
+        <h3>Lending</h3>
+        <p>Borrow or lend items easily and securely with our trusted platform.</p>
+      </a>
+      <!-- Renting Card -->
+      <a href="renting.html" class="card card-link">
+        <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </svg>
+        <h3>Renting</h3>
+        <p>Rent equipment, tools, and more from people near you at great prices.</p>
+      </a>
+      <!-- Helping Card -->
+      <a href="helping.html" class="card card-link">
+        <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-3.74-3.741 9.093 9.093 0 0 0-3.26 3.26c-.41.961.023 2.1.92 2.625.3.209.641.314.979.314Z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5V18l-3-3v-3.375C10.5 8.901 11.902 7.5 13.5 7.5Z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 6.72a9.094 9.094 0 0 1 3.741-.479 3 3 0 0 1 3.74 3.741 9.093 9.093 0 0 1-3.26 3.26c-.41.961.023 2.1.92 2.625.3.209.641.314.979.314Z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 10.5V18l 3-3v-3.375C13.5 8.901 12.098 7.5 10.5 7.5Z" />
+        </svg>
+        <h3>Helping</h3>
+        <p>Connect with volunteers and offer or get help when you need it most.</p>
+      </a>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <p>Contact us: support@helpin.com</p>
+    <p>&copy; 2025 Helpin. All rights reserved.</p>
+  </footer>
+
+  <!-- Main App Script -->
+  <script type="module" src="app.js?v=3"></script>
+</body>
+</html>
+

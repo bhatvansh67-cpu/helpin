@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Helpin - Browse</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Browse public listings near you." />
+  <meta name="theme-color" content="#f97316" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="logo"><b>Help</b><span class="logo-accent">in</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lending.html">Lending</a></li>
+        <li><a href="renting.html">Renting</a></li>
+        <li><a href="helping.html">Helping</a></li>
+        <li><a href="browse.html" class="active">Browse</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+      <div class="nav-links" id="auth-links">
+        <a href="login.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="user-info-bar" id="user-info" style="display: none;">
+    Logged in as: <span id="user-id-display" class="font-bold"></span>
+  </div>
+
+  <main class="main-content">
+    <h1>Browse Listings Near You</h1>
+    <section class="listing-form-container">
+      <div class="browse-controls">
+        <button id="use-location">Use my location</button>
+        <label>
+          Radius:
+          <select id="radius-km">
+            <option value="2">2 km</option>
+            <option value="5" selected>5 km</option>
+            <option value="10">10 km</option>
+            <option value="25">25 km</option>
+            <option value="50">50 km</option>
+          </select>
+        </label>
+        <label>
+          Category:
+          <select id="filter-category">
+            <option value="all" selected>All</option>
+            <option value="lending">Lending</option>
+            <option value="renting">Renting</option>
+            <option value="helping">Helping</option>
+          </select>
+        </label>
+        <input id="filter-text" placeholder="Search title/type" />
+      </div>
+      <div id="public-listings-list">
+        <p class="text-gray-500">Loading public listings...</p>
+      </div>
+      <div class="browse-controls" style="justify-content: space-between;">
+        <div>
+          <button id="prev-page">Prev</button>
+          <button id="next-page">Next</button>
+        </div>
+        <div id="page-info" style="color:#6b7280;"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <p>Contact us: support@helpin.com</p>
+    <p>&copy; 2025 Helpin. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="app.js?v=6"></script>
+</body>
+</html>
+
+

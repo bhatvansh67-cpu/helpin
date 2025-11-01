@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Helpin - Chat</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="logo"><b>Help</b><span class="logo-accent">in</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lending.html">Lending</a></li>
+        <li><a href="renting.html">Renting</a></li>
+        <li><a href="helping.html">Helping</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li><a href="messages.html">Messages</a></li>
+      </ul>
+      <div class="nav-links" id="auth-links">
+        <a href="login.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="user-info-bar" id="user-info" style="display: none;">
+    Logged in as: <span id="user-id-display" class="font-bold"></span>
+  </div>
+
+  <main class="main-content">
+    <h1>Chat</h1>
+    <section class="listing-form-container">
+      <div id="chat-header" style="margin-bottom:10px;color:#6b7280;"></div>
+      <div id="messages" style="min-height:300px;max-height:50vh;overflow:auto;display:flex;flex-direction:column;gap:8px;border:1px solid #e5e7eb;border-radius:8px;padding:10px;background:#fff;"></div>
+      <form id="chat-form" class="auth-form" style="flex-direction:row;gap:10px;margin-top:10px;">
+        <input type="text" id="chat-input" placeholder="Type a message..." style="flex:1;" required />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <p>Contact us: support@helpin.com</p>
+    <p>&copy; 2025 Helpin. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="app.js?v=7"></script>
+</body>
+</html>
+
+
